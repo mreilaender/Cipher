@@ -61,8 +61,17 @@ public class SubstitutionCipherTest {
 	{
 		cipher.setSecretAlphabet(new StringBuilder(new String(MonoalphabeticCipher.STANDARD_ALPHABET)).reverse().toString());
 	}
-	
-	public void enDeCryptTest() {//ver- und entschlüsseln
-		System.out.println("test");
+	/*
+	 * Verschlüsseln/Entschlüsseln dann vergleichen
+	 */
+	public void enDeCryptTest()
+	{
+		cipher.setSecretAlphabet(new StringBuilder(new String(MonoalphabeticCipher.STANDARD_ALPHABET)).reverse().toString());
+
+		String encr = cipher.encrypt("asdf"); encr = cipher.decrypt(encr); //encrypten/decrypten
+		
+		assertEquals(encr, "asdf");
+		
+		encr = null; System.gc();
 	}
 }
