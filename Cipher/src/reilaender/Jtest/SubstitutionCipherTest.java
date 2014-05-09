@@ -3,7 +3,7 @@ package reilaender.Jtest;
 import static org.junit.Assert.assertEquals;
 import reilaender.cipher.MonoalphabeticCipher;
 import reilaender.cipher.SubstitutionCipher;
-//import static org.junit.Assert.assertNotEquals; --> Package wird nicht gefunden
+//import static org.junit.Assert.assertNotEquals;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -63,6 +63,6 @@ public class SubstitutionCipherTest {
 	}
 	
 	public void enDeCryptTest() {//ver- und entschlüsseln
-		
+		System.out.println("test");
 	}
 }
